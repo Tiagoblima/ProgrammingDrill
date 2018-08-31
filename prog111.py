@@ -2,13 +2,13 @@ import math
 
 print("Type the first complex number")
 
-a1 = int(input("a: "))
-b1 = int(input("b: "))
+a1 = float(input("a: "))
+b1 = float(input("b: "))
 
 print("Type the second complex numeber")
 
-a2 = int(input("a: "))
-b2 = int(input("b: "))
+a2 = float(input("a: "))
+b2 = float(input("b: "))
 
 
 print("c1: {0} + {1}i\nc2: {2} + {3}i".format(a1,b1,a2,b2))
