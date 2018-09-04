@@ -42,4 +42,4 @@ print("Polar Division: {0}".format(polar_div(polar1, polar2)))
 print("Polar Multiplication {0}".format(polar_mul(polar1, polar2)))
 
 
-Draw(c1, c2, polar1)
+Draw(c1, c2)

@@ -81,7 +81,7 @@ def polar_div(polar1, polar2):
     result = round(p), o
     return result
 
-def Draw(u, v, polar):
+def Draw(u, v):
     plt.quiver( u, v, angles='xy', scale_units='xy', scale=1)
     plt.xlim(-10, 10)
     plt.ylim(-10, 10)
