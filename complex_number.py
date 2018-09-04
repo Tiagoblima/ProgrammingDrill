@@ -1,6 +1,7 @@
 import math
 import matplotlib.pyplot as plt
 
+
 # Programming Drill 1.1.1
 
 def sum(c1, c2):
@@ -81,8 +82,27 @@ def polar_div(polar1, polar2):
     result = round(p), o
     return result
 
+
 def Draw(u, v):
-    plt.quiver( u, v, angles='xy', scale_units='xy', scale=1)
+    plt.quiver(u, v, angles='xy', scale_units='xy', scale=1)
     plt.xlim(-10, 10)
     plt.ylim(-10, 10)
     plt.show()
+
+
+def op_input():
+    n = int(input("Type the vector size: "))
+
+    i = 0
+    u = []
+    while i < n:
+        print("First vector: ")
+        str = input("format: (a,b):")
+        str = str.split(",")
+        a = int(str[0])
+        b = int(str[1])
+        c = (a, b)
+        u.append(c)
+        i += 1
+    print(u)
+

@@ -3,18 +3,19 @@ from complex_number import *
 
 print("Type the first complex number")
 
-a1 = float(input("a: "))
-b1: float = float(input("b: "))
+str1 = input("format a,b: ")
+str1 = str1.split(",")
 
 print("Type the second complex numeber")
 
-a2 = float(input("a: "))
-b2 = float(input("b: "))
+str2 = input("format a,b: ")
+str2 = str2.split(",")
 
-print("c1: {0} + {1}i\nc2: {2} + {3}i".format(a1, b1, a2, b2))
+c1 = int(str1[0]), int(str1[1])
+c2 = int(str2[0]), int(str2[1])
 
-c1 = a1, b1
-c2 = a2, b2
+print("c1: {0} + {1}i\nc2: {2} + {3}i".format(c1[0], c1[1], c2[0], c2[1]))
+
 
 sum = sum(c1, c2)
 print("Sum of c1 and c2: {0}".format(sum))
@@ -41,5 +42,23 @@ print("Cartesian Representation c1: {0} c2: {1}".format(to_cartesian(polar1), to
 print("Polar Division: {0}".format(polar_div(polar1, polar2)))
 print("Polar Multiplication {0}".format(polar_mul(polar1, polar2)))
 
+plt.plot([2, 4, 6], [2, 4, 6])
+plt.show()
+#Draw(c1, c2)
 
-Draw(c1, c2)
+from mpl_toolkits.mplot3d import Axes3D
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+
+import numpy as np
+
+
+theta = np.linspace(-4 * np.pi, 4 * np.pi, 100)
+z = np.linspace(-2, 2, 100)
+r = z**2 + 1
+x = r * np.sin(theta)
+y = r * np.cos(theta)
+
+Axes3D.plot(x, y, z)
+ax.plot(x, y, z, label='parametric curve')
