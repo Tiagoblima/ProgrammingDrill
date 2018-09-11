@@ -44,21 +44,6 @@ print("Polar Multiplication {0}".format(polar_mul(polar1, polar2)))
 
 plt.plot([2, 4, 6], [2, 4, 6])
 plt.show()
-#Draw(c1, c2)
-
-from mpl_toolkits.mplot3d import Axes3D
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
+Draw(c1, c2)
 
 
-import numpy as np
-
-
-theta = np.linspace(-4 * np.pi, 4 * np.pi, 100)
-z = np.linspace(-2, 2, 100)
-r = z**2 + 1
-x = r * np.sin(theta)
-y = r * np.cos(theta)
-
-Axes3D.plot(x, y, z)
-ax.plot(x, y, z, label='parametric curve')

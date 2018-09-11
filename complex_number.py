@@ -90,19 +90,6 @@ def Draw(u, v):
     plt.show()
 
 
-def op_input():
-    n = int(input("Type the vector size: "))
 
-    i = 0
-    u = []
-    while i < n:
-        print("First vector: ")
-        str = input("format: (a,b):")
-        str = str.split(",")
-        a = int(str[0])
-        b = int(str[1])
-        c = (a, b)
-        u.append(c)
-        i += 1
-    print(u)
+
 
